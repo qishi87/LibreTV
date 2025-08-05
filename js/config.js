@@ -114,60 +114,10 @@ const API_SITES = {
         api: 'https://cj.lziapi.com/api.php/provide/vod/',
         name: '量子资源站'
     },
-    ckzy: {
-        api: 'https://www.ckzy1.com',
-        name: 'CK资源',
+    testSource: {
+        api: 'https://www.example.com/api.php/provide/vod',
+        name: '空内容测试源',
         adult: true
-    },
-    jkun: {
-        api: 'https://jkunzyapi.com',
-        name: 'jkun资源',
-        adult: true
-    },
-    bwzy: {
-        api: 'https://api.bwzym3u8.com',
-        name: '百万资源',
-        adult: true
-    },
-    souav: {
-        api: 'https://api.souavzy.vip',
-        name: 'souav资源',
-        adult: true
-    },
-    r155: {
-        api: 'https://155api.com',
-        name: '155资源',
-        adult: true
-    },
-    lsb: {
-        api: 'https://apilsbzy1.com',
-        name: 'lsb资源',
-        adult: true
-    },
-    huangcang: {
-        api: 'https://hsckzy.vip',
-        name: '黄色仓库',
-        adult: true,
-        detail: 'https://hsckzy.vip'
-    },
-    yutu: {
-        api: 'https://yutuzy10.com',
-        name: '玉兔资源',
-        adult: true
-    },
-
-    // 下面是资源失效率高的API源，不建议使用
-    subo: {
-        api: 'https://subocaiji.com/api.php/provide/vod',
-        name: '速播资源'
-    },
-    fczy: {
-        api: 'https://api.fczy888.me/api.php/provide/vod',
-        name: '蜂巢资源'
-    },
-    ukzy: {
-        api: 'https://api.ukuapi88.com/api.php/provide/vod',
-        name: 'U酷资源'
     },
 };
 
@@ -222,12 +172,12 @@ const CUSTOM_PLAYER_URL = 'player.html'; // 使用相对路径引用本地player
 const PLAYER_CONFIG = {
     autoplay: true,
     allowFullscreen: true,
-    width: '100%'，
-    height: '600',
+    width: '100%',
+    height: '600'，
     timeout: 15000，  // 播放器加载超时时间
     filterAds: true，  // 是否启用广告过滤
     autoPlayNext: true，  // 默认启用自动连播功能
-    adFilteringEnabled: true, // 默认开启分片广告过滤
+    adFilteringEnabled: true， // 默认开启分片广告过滤
     adFilteringStorage: 'adFilteringEnabled' // 存储广告过滤设置的键名
 };
 
@@ -235,16 +185,16 @@ const PLAYER_CONFIG = {
 const ERROR_MESSAGES = {
     NETWORK_ERROR: '网络连接错误，请检查网络设置',
     TIMEOUT_ERROR: '请求超时，服务器响应时间过长',
-    API_ERROR: 'API接口返回错误，请尝试更换数据源'，
-    PLAYER_ERROR: '播放器加载失败，请尝试其他视频源',
+    API_ERROR: 'API接口返回错误，请尝试更换数据源',
+    PLAYER_ERROR: '播放器加载失败，请尝试其他视频源'，
     UNKNOWN_ERROR: '发生未知错误，请刷新页面重试'
 };
 
 // 添加进一步安全设置
 const SECURITY_CONFIG = {
-    enableXSSProtection: true，  // 是否启用XSS保护
+    enableXSSProtection: true,  // 是否启用XSS保护
     sanitizeUrls: true，         // 是否清理URL
-    maxQueryLength: 100,        // 最大搜索长度
+    maxQueryLength: 100，        // 最大搜索长度
     // allowedApiDomains 不再需要，因为所有请求都通过内部代理
 };
 
